@@ -8,17 +8,17 @@
 	<string>ad-hoc</string>
 	<key>provisioningProfiles</key>
 	<dict>
-		<key>cn.com.schneider-electric.HipRock</key>
-		<string>hocHipRock</string>
+		<key>cn.com.schneider-electric.EDisco</key>
+		<string>hocEDisco</string>
 	</dict>
 	<key>signingCertificate</key>
-	<string>FFF5F4451113862D7390783554036AB813264EDB</string>
+	<string>iPhone Distribution</string>
 	<key>signingStyle</key>
 	<string>manual</string>
 	<key>stripSwiftSymbols</key>
 	<true/>
 	<key>teamID</key>
-	<string>46REERL7A3</string>
+	<string>F3A8R3FAA7</string>
 	<key>thinning</key>
 	<string>&lt;none&gt;</string>
 </dict>

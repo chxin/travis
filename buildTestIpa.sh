@@ -22,7 +22,7 @@ then
 # else 
 # 	version=$oldVer	
 fi
-
+version=1.0.4
 APPNAME='HipRock_V'$version
 
 git checkout ${PLIST_PATH}
