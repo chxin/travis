@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name_test">机器顾问_测试</string>
+    <string name="app_name_prod">机器顾问</string>
+    <string name="font">Lantinghei SC</string>
+</resources>

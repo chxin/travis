@@ -1,0 +1,11 @@
+language: objective-c
+sudo: required
+before_install:
+  - DevToolsSecurity -status
+  - DevToolsSecurity -enable
+install: 
+  - npm install 
+before_script:
+  - source ios/RockCer/add-key.sh
+script:
+  - source ./buildTestIpa.sh
