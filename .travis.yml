@@ -1,11 +1,35 @@
-language: objective-c
+language: android
 sudo: required
+
 before_install:
-  - DevToolsSecurity -status
-  - DevToolsSecurity -enable
+  - openssl aes-256-cbc -K $encrypted_a82ef42c7f17_key -iv $encrypted_a82ef42c7f17_iv
+    -in hiprock.jks.enc -out android/app/hiprock.jks -d
+  - nvm install 6
+  - node --version
+  - wget http://dl.google.com/android/ndk/android-ndk-r10e-linux-x86_64.bin
+  - chmod +x android-ndk-r10e-linux-x86_64.bin
+  - ./android-ndk-r10e-linux-x86_64.bin | grep ndk-build.cmd
+  - export ANDROID_NDK=`pwd`/android-ndk-r10e
+  - echo $ANDROID_NDK
 install: 
-  - npm install 
-before_script:
-  - source ios/RockCer/add-key.sh
+  - npm install
+android:
+  components:
+  - tools
+  - platform-tools
+
+  - build-tools-23.0.1
+  - build-tools-23.0.2
+  - build-tools-25.0.0
+  - build-tools-25.0.1
+  - build-tools-26.0.1
+  - build-tools-26.0.2
+  - android-23
+  - android-25
+  - extra-google-google_play_services
+  - extra-google-m2repository
+  - extra-android-m2repository
+  - addon-google_apis-google-26
 script:
-  - source ./buildTestIpa.sh
+  - source run.sh
+  

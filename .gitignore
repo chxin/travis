@@ -21,13 +21,18 @@ DerivedData
 *.ipa
 *.xcuserstate
 project.xcworkspace
+local.properties
+ios/RockCer/dist.p12
+ios/RockCer/ios_distribution.cer
+ios/RockCer/profile/hocEDisco.mobileprovision
 
 # Android/IJ
 #
 *.iml
 .idea
 .gradle
-local.properties
+android/app/hiprock.jks
+
 
 # node.js
 #
@@ -39,6 +44,7 @@ buck-out/
 \.buckd/
 android/app/libs
 android/keystores/debug.keystore
+buildIOSTemp/*
 
 # compiled js file
 .bundle

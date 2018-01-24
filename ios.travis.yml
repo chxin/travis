@@ -1,6 +1,13 @@
 language: objective-c
 sudo: required
 before_install:
+  - openssl aes-256-cbc -K $encrypted_a82ef42c7f17_key -iv $encrypted_a82ef42c7f17_iv
+    -in hocEDisco.mobileprovision.enc -out ios/RockCer/profile/hocEDisco.mobileprovision
+    -d
+  - openssl aes-256-cbc -K $encrypted_a82ef42c7f17_key -iv $encrypted_a82ef42c7f17_iv
+    -in ios_distribution.cer.enc -out ios/RockCer/ios_distribution.cer -d
+  - openssl aes-256-cbc -K $encrypted_a82ef42c7f17_key -iv $encrypted_a82ef42c7f17_iv
+    -in dist.p12.enc -out ios/RockCer/dist.p12 -d
   - DevToolsSecurity -status
   - DevToolsSecurity -enable
 install: 
